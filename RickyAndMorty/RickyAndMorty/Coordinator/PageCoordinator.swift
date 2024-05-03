@@ -22,7 +22,7 @@ final class PageCoordinator: PageCoordinatorProtocol {
         self.dependencies = dependencies
     }
     func start() {
-        showTabBar()
+        self.showTabBar()
     }
     private func showTabBar() {
         let episodesViewController = EpisodesAssembly.configure(dependencies)
@@ -37,7 +37,7 @@ final class PageCoordinator: PageCoordinatorProtocol {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [episodesViewController, favoritesViewController]
         tabBarController.tabBar.backgroundColor = .white
-        tabBarController.tabBar.tintColor = .blue
+        tabBarController.tabBar.tintColor = AppColors.blue
         self.navigationController.setViewControllers([tabBarController], animated: true)
     }
     private func handleMainEvent(_ event: EpisodesViewController.EventType) {

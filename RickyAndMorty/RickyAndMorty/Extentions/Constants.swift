@@ -8,7 +8,7 @@
 import Foundation
 
 enum Constants {
-    
+    static let favoritePageTitleTaxt = "Favourites episodes"
 }
 enum ImageName {
     static let launchImageFirst = "Logo"
