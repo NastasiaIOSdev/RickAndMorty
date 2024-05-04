@@ -12,7 +12,7 @@ final class EpisodesHeaderView: UIView {
     // MARK: - Property
     private let contentView = UIView()
     private let logoImage = UIImageView()
-    private let searchBarView = UISearchBar()
+    private let searchBarView = SearchBarView()
     private let advancedFilter = AdvancedFilterView()
     // MARK: - init
     init() {
@@ -24,10 +24,11 @@ final class EpisodesHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+// MARK: - SetupUI
 private extension EpisodesHeaderView {
     private func setupUI() {
         addSubview(self.contentView)
-        contentView.snp.makeConstraints { make in
+        self.contentView.snp.makeConstraints { make in
             make.top.bottom.leading.trailing.equalToSuperview()
         }
         self.setupLogoImage()
@@ -47,14 +48,14 @@ private extension EpisodesHeaderView {
         self.contentView.addSubview(self.searchBarView)
         self.searchBarView.snp.makeConstraints { make in
             make.top.equalTo(self.logoImage.snp.bottom).offset(67)
-            make.leading.trailing.equalToSuperview().inset(22)
+            make.leading.trailing.equalToSuperview()
             make.height.equalTo(56)
         }
     }
     private func setupAdvancedFilter() {
         self.contentView.addSubview(self.advancedFilter)
         self.advancedFilter.snp.makeConstraints { make in
-            make.top.equalTo(self.searchBarView.snp.bottom).offset(10)
+            make.top.equalTo(self.searchBarView.snp.bottom).offset(12)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(56)
         }

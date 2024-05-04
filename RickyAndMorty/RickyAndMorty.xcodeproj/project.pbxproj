@@ -29,7 +29,6 @@
 		2EFD9C2B2BE51046003E6448 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C2A2BE51046003E6448 /* FavoritesViewModel.swift */; };
 		2EFD9C2D2BE51074003E6448 /* ChatacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C2C2BE51074003E6448 /* ChatacterDetailViewModel.swift */; };
 		2EFD9C302BE51C97003E6448 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C2F2BE51C97003E6448 /* Constants.swift */; };
-		2EFD9C332BE51E38003E6448 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EFD9C322BE51E38003E6448 /* SnapKit */; };
 		2EFD9C352BE530AD003E6448 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C342BE530AD003E6448 /* AppFonts.swift */; };
 		2EFD9C3B2BE53134003E6448 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFD9C382BE53134003E6448 /* Roboto-Bold.ttf */; };
 		2EFD9C3C2BE53134003E6448 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFD9C392BE53134003E6448 /* Roboto-Regular.ttf */; };
@@ -41,6 +40,9 @@
 		2EFD9C4C2BE540EC003E6448 /* NumberEpisodeLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C4B2BE540EB003E6448 /* NumberEpisodeLikeView.swift */; };
 		2EFD9C4E2BE54167003E6448 /* ReusableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C4D2BE54167003E6448 /* ReusableCollectionView.swift */; };
 		2EFD9C502BE541B3003E6448 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C4F2BE541B3003E6448 /* CollectionViewCell.swift */; };
+		2EFD9C522BE579FD003E6448 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C512BE579FD003E6448 /* ViewShadow.swift */; };
+		2EFD9C542BE5F81E003E6448 /* LikeButtonViiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD9C532BE5F81E003E6448 /* LikeButtonViiew.swift */; };
+		2EFD9C582BE6478D003E6448 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EFD9C572BE6478D003E6448 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		2EFD9C4B2BE540EB003E6448 /* NumberEpisodeLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberEpisodeLikeView.swift; sourceTree = "<group>"; };
 		2EFD9C4D2BE54167003E6448 /* ReusableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionView.swift; sourceTree = "<group>"; };
 		2EFD9C4F2BE541B3003E6448 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2EFD9C512BE579FD003E6448 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
+		2EFD9C532BE5F81E003E6448 /* LikeButtonViiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonViiew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EFD9C332BE51E38003E6448 /* SnapKit in Frameworks */,
+				2EFD9C582BE6478D003E6448 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				2EFD9C2F2BE51C97003E6448 /* Constants.swift */,
+				2EFD9C512BE579FD003E6448 /* ViewShadow.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -256,10 +261,19 @@
 				2EFD9C4D2BE54167003E6448 /* ReusableCollectionView.swift */,
 				2EFD9C4F2BE541B3003E6448 /* CollectionViewCell.swift */,
 				2EFD9C472BE54027003E6448 /* SearchBarView.swift */,
-				2EFD9C492BE54060003E6448 /* AdvancedFilterView.swift */,
 				2EFD9C4B2BE540EB003E6448 /* NumberEpisodeLikeView.swift */,
+				2EFD9C532BE5F81E003E6448 /* LikeButtonViiew.swift */,
+				2EFD9C552BE60F80003E6448 /* SearchFilter */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2EFD9C552BE60F80003E6448 /* SearchFilter */ = {
+			isa = PBXGroup;
+			children = (
+				2EFD9C492BE54060003E6448 /* AdvancedFilterView.swift */,
+			);
+			path = SearchFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +293,7 @@
 			);
 			name = RickyAndMorty;
 			packageProductDependencies = (
-				2EFD9C322BE51E38003E6448 /* SnapKit */,
+				2EFD9C572BE6478D003E6448 /* SnapKit */,
 			);
 			productName = RickyAndMorty;
 			productReference = 2EFD9BED2BE4C78B003E6448 /* RickyAndMorty.app */;
@@ -310,7 +324,7 @@
 			);
 			mainGroup = 2EFD9BE42BE4C78B003E6448;
 			packageReferences = (
-				2EFD9C312BE51E38003E6448 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2EFD9C562BE6478D003E6448 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 2EFD9BEE2BE4C78B003E6448 /* Products */;
 			projectDirPath = "";
@@ -342,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EFD9C092BE4FD1A003E6448 /* Coordinator.swift in Sources */,
+				2EFD9C522BE579FD003E6448 /* ViewShadow.swift in Sources */,
 				2EFD9C4A2BE54060003E6448 /* AdvancedFilterView.swift in Sources */,
 				2EFD9C432BE53CC0003E6448 /* AppColors.swift in Sources */,
 				2EFD9C1F2BE50DB7003E6448 /* EpisodesAssembly.swift in Sources */,
@@ -355,6 +370,7 @@
 				2EFD9C292BE5102A003E6448 /* EpisodeViewModel.swift in Sources */,
 				2EFD9BF52BE4C78B003E6448 /* EpisodesViewController.swift in Sources */,
 				2EFD9C462BE53F70003E6448 /* EpisodesHeaderView.swift in Sources */,
+				2EFD9C542BE5F81E003E6448 /* LikeButtonViiew.swift in Sources */,
 				2EFD9C252BE50E49003E6448 /* FavoritesAssembly.swift in Sources */,
 				2EFD9C352BE530AD003E6448 /* AppFonts.swift in Sources */,
 				2EFD9C232BE50E2F003E6448 /* CharacterDetailAssembly.swift in Sources */,
@@ -514,6 +530,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,6 +558,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,7 +596,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2EFD9C312BE51E38003E6448 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		2EFD9C562BE6478D003E6448 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -589,9 +607,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2EFD9C322BE51E38003E6448 /* SnapKit */ = {
+		2EFD9C572BE6478D003E6448 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2EFD9C312BE51E38003E6448 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 2EFD9C562BE6478D003E6448 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
