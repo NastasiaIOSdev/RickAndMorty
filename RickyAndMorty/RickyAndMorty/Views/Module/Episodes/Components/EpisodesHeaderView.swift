@@ -5,7 +5,6 @@
 //  Created by Анастасия Ларина on 03.05.2024.
 //
 import UIKit
-import SwiftUI
 import SnapKit
 
 final class EpisodesHeaderView: UIView {
@@ -15,11 +14,10 @@ final class EpisodesHeaderView: UIView {
     private let searchBarView = SearchBarView()
     private let advancedFilter = AdvancedFilterView()
     // MARK: - init
-    init() {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         self.setupUI()
     }
-    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -27,6 +25,7 @@ final class EpisodesHeaderView: UIView {
 // MARK: - SetupUI
 private extension EpisodesHeaderView {
     private func setupUI() {
+        backgroundColor = .clear
         addSubview(self.contentView)
         self.contentView.snp.makeConstraints { make in
             make.top.bottom.leading.trailing.equalToSuperview()

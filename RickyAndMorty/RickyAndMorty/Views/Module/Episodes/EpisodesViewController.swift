@@ -44,8 +44,8 @@ private extension EpisodesViewController {
 //        }
         view.addSubview(collectionView)
         self.collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-//            make.top.equalTo(headerView.snp.bottom).offset(20)
+            make.top.equalToSuperview().offset(30)
+//       make.top.equalTo(headerView.snp.bottom).offset(20)
             make.leading.trailing.bottom.equalToSuperview()
         }
     }
@@ -64,7 +64,7 @@ private extension EpisodesViewController {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? UICollectionViewCell else {
                 fatalError("Failed to dequeue cell")
             }
-            let cellView = ViewForCollectionCell()
+            let cellView = CollectionViewCell()
             cell.contentView.addSubview(cellView)
             cellView.snp.makeConstraints { make in
                 make.edges.equalToSuperview()
@@ -82,4 +82,8 @@ extension EpisodesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 360)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 55
+    }
+    
 }
